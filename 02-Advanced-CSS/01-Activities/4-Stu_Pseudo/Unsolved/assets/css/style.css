@@ -30,6 +30,25 @@ li {
   width: 135px;
 }
 
+li:nth-child(2n -1) {
+  background-color: tomato;
+}
+
+li::before {
+  content: "🥔";
+}
+
+li:hover {
+  background-color: blue;
+}
+
+li:hover::before {
+  content:  "❤️";
+}
+
+.intro::first-line {
+  font-weight:bold;
+}
 .button {
   background-color: purple;
   border: none;
