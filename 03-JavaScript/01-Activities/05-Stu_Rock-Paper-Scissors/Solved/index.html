@@ -13,6 +13,9 @@
       var wins = 0;
       var losses = 0;
       var ties = 0;
+      var playAgain = "";
+
+
 
       for (var i = 0; i < 3; i++) {
         // Randomly chooses a choice from the options array. This is the Computer's guess.
@@ -49,13 +52,22 @@
 
       // When the game is over, alert the totals to the user. We can use the \n character to make a line break.
       alert(
-        'Total wins: ' +
+        'SCORE BOARD ' +
+        '\nTotal wins: ' +
           wins +
           '\nTotal ties: ' +
           ties +
           '\nTotal losses: ' +
           losses
       );
+   
+        alert('Do you want to play again?');
+            if(playAgain = 'yes') {
+        alert('Lets get ready to rumble!');
+            
+    }
+   
     </script>
+   
   </body>
 </html>
