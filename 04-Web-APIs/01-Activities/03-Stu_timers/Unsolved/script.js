@@ -12,11 +12,23 @@ function countdown() {
 
   // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
   var timeInterval = setInterval(function() {
-    //
-    // YOUR CODE HERE
-    //
-  });
-}
+    if(timeLeft > 1) {
+      timerEl.textContent = (timeLeft + " seconds remaining.");
+      timeLeft--;
+    } else if (timeLeft === 1) {
+      timerEl.textContent = (timeLeft + " second remaining.");
+      timeLeft--;
+    } else {
+      timerEl.textContent = ("");
+      // clear interval
+      clearInterval(timeInterval); // destroys the data set up in setInterval()
+      displayMessage(message);
+      // display message
+      
+    }
+     
+  } , 1000 );
+}  
 
 // Displays the message one word at a time
 function displayMessage() {
