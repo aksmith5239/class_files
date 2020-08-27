@@ -68,24 +68,26 @@
 
         // Get the to-do "value" from the textbox and store it as a variable using `.val()` and `.trim()`
         // YOUR CODE HERE
-        //
-
+        var toDoTask = $("#to-do")
+          .val()
+          .trim();
         // Add the new to-do to our local 'list' variable
         // YOUR CODE HERE
-        //
+        list.push(toDoTask);
 
         // Update the to-dos on the page
         // YOUR CODE HERE
-        //
-
+        renderTodos(list)
         // Save the to-dos into localStorage
         // We need to use JSON.stringify to turn the list from an array into a string
         // YOUR CODE HERE
-        //
+        localStorage.setItem('todolist', JSON.stringify(list));
 
         // Clear the textbox when done using `.val()`
         // YOUR CODE HERE
-        //
+        $(".reset").click(function() {
+          $(this).closest('span').find("input[type=text], input").val("");
+        });
       });
 
       $(document).on('click', '.checkbox', function() {
