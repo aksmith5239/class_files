@@ -1,6 +1,6 @@
 // Create a function called `myFunction()`
 // YOUR CODE HERE
-//
+
 // Create a variable that will use `document.querySelector()` to target the `id` of the input 
 // Use `.value` to capture the value of the input and store it in the variable
 // YOUR CODE HERE
