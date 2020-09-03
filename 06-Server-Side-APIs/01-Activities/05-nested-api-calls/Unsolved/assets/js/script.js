@@ -1,7 +1,7 @@
 function myFunction() {
   fetch(
     // Make a fetch request to Wikipedia to get a random article title
-    `// YOUR CODE HERE`
+    `https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&rnnamespace=0&rnlimit=1&origin=*`
     //
   )
     .then(function(wikiResponse) {
@@ -9,17 +9,21 @@ function myFunction() {
     })
     .then(function(wikiResponse) {
       // Create a variable to hold the title of the Wikipedia article
-      // YOUR CODE HERE
+      var responseHeaderEl = document.querySelector('#response-header'); r
       //
       // Display the article title above the GIF as a <h2> heading
-      // YOUR CODE HERE
+      
+      var searchTitleEl = document.createElement('h2');
+      responseHeaderEl.appendChild(searchTitleEl);
+
       //
       var rating = document.getElementById('rating').value;
       // Return a fetch request to the Giphy search API with the article title and rating parameters
       // YOUR CODE HERE
+      fetch (`https://api.giphy.com/v1/gifs/search?q=${searchTerm}&${rating}&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN&limit=1`)
       //
       // Remember to add your API key at the end
-    })
+    
     .then(function(response) {
       return response.json();
     })
@@ -35,4 +39,5 @@ function myFunction() {
         responseContainerEl.appendChild(gifImg);
       }
     });
+  })
 }
